@@ -1,10 +1,40 @@
 body{
-    background-color: rgb(164, 235, 240);
+    background-color: rgba(58, 1, 1, 0.89);
     font-family: 'Courier New', monospace;
-    background:  rgb(164, 235, 240);
+    background:  rgba(58, 1, 1, 0.89);
     animation: mymove 5s ease-out;
   }
     @keyframes mymove {
       from {background-color: rgb(0, 0, 0);}
-      to {background-color:  rgb(164, 235, 240)}
+      to {background-color:  rgba(58, 1, 1, 0.89)}
     } 
+    
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}  
+li {
+  
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  }
+li{
+  background-color: rgba(49, 6, 6, 0.89);
+  
+  border: 2px solid #000000
+}
+li:hover{
+  background-color: #e91010;
+  color: white;
+}
+
+
+
