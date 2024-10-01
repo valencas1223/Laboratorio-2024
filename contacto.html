@@ -6,18 +6,117 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Contacto</title>
 </head>
-<body>
+<body class="container1">
     <header>
         <h1>Contactos</h1>
     </header>
+    <nav>
+        <ul>
+             <li><a href="index.html">Atras</a></li>
+        </ul>
+    </nav>
+    
     <section>
-        <p>Por Favor Pongan sus Datos</p>
+        
+        <form>
+            <fieldset>
+            <legend>Formulario</legend>
+        <p><label for="nombre">Nombre (Max. 20 caracteres):</label> <input type="text" name="nombre" id="nombre" max="20" required></p>
+        
+        <p><label for="apellido">Apellido (Max. 20 caracteres)</label> <input type="text" id="apellido" name="apelldio" maxlength="20"></p>
+
+        <p><label for="email">Email:</label><input type="email" id="email" name="email" required></p>
+
+        <p><label for="celular">Numero de telefono celular:</label> <input type="telefono" name="telefono" placeholder="Ej 12345614" onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 123456789'"></p>
+         
+        <p><label for="edad">Edad (16 a 120 años):</label> <input type="number" id="edad" name="edad" min="16" max="120"></p>
+
+        <p><label for="direccion">Direccion:</label> <textarea name="direccion" id="direccion" rows="3"></textarea></p>
+
+                    <legend>Provincia</legend>  
+        <select id="provincias">
+                    <option value="Chubut">Chubut</option>
+                    <option value="Neuquén">Neuquén</option>
+                    <option value="Río Negro">Rio Negro</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+        </select>
+                    <P><label for="codigopostal">Codigo Postal (Formato: A1234ABC:)</label> <input type="text" id="codigopostal" name="codigopostal" pattern="[A][0-9]{4}[A-Z]{3}" title="Formato: A1234ABC" required></P>
+       </fieldset>
+       <fieldset>
+                    <legend>Metodo Preferido de Contacto</legend>
+                    <p><input type="radio" id="correo" name="metodocontacto" value="correo" checked><label for="correo">Correo Electronico</label></p>
+
+                    <p><input type="radio" id="postal" name="metodoContacto" value="postal"><label for="postal">Correo Postal</label></p>
+
+                    <p><input type="radio" id="telefono" name="metodoContacto" value="telefono"><label for="telefono">Teléfono</label></p>
+       </fieldset> 
+       <fieldset>
+         <legend>Tipos de Suscripciones</legend>
+
+         <p><input type="checkbox" id="noticias" name="suscripcion" value="noticias"> <label for="noticias">Noticias</label></p>
+
+         <p><input type="checkbox" id="promociones" name="suscripcion" value="promociones"><label for="promociones">Promociones</label></p>
+
+         <p><input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked><label for="alertas">Alertas</label></p>
+
+         <p><input type="checkbox" id="eventos" name="suscripcion" value="eventos"> <label for="eventos">Eventos</label></p>
+       </fieldset>
+       
+            
+       </form>
     </section>
+
     <section>
-        <form action="contacto.html" method="post" id="formulario">
-            <legend>Datos Personales</legend>
-           <p></p> <label for="Nombre">Nombre</label>
-        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ítem</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Provincia</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Código Postal</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Método de Contacto</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Suscripción</td>
+                    <td></td>
+                </tr>
+            
+        </table>
     </section>
     
 </body>
