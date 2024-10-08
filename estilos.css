@@ -1,13 +1,16 @@
 body{
-    background-color: rgba(58, 1, 1, 0.89);
-    font-family: 'Courier New', monospace;
-    background:  rgba(58, 1, 1, 0.89);
+    background-color: rgba(73, 70, 70, 0.89);
+    font-family: 'Courier New';
+    background:  rgba(73, 70, 70, 0.89);
     animation: mymove 5s ease-out;
   }
     @keyframes mymove {
       from {background-color: rgb(0, 0, 0);}
-      to {background-color:  rgba(58, 1, 1, 0.89)}
+      to {background-color:  rgba(73, 70, 70, 0.89)}
     } 
+ 
+
+
     
 ul{
   list-style-type: none;
@@ -27,12 +30,12 @@ li {
   transition-duration: 0.4s;
   }
 li{
-  background-color: rgba(49, 6, 6, 0.89);
+  background-color: rgba(75, 82, 105, 0.89);
   
   border: 2px solid #000000
 }
 li:hover{
-  background-color: #e91010;
+  background-color: #070ac7;
   color: white;
 }
 label {
@@ -51,17 +54,7 @@ input[type="radio"], input[type="checkbox"] {
   width: auto;
   margin-right: 10px;
 }
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #45a049;
-}
+
 table {
   margin-top: 20px;
   width: 100%;
@@ -73,10 +66,10 @@ th, td {
   text-align: left;
 }
 th {
-  background-color: #765c86;
+  background-color: #2b2d8a;
 }
 fieldset{
-  color: #ffffff;
+  color: #fffdfd;
  
 }
 legend{
@@ -85,16 +78,35 @@ legend{
 }
 .form-container,.container1{
   text-align: center;
-  background-color: #500e0e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-  }
-  .a{
-    font-family: 'Courier New', monospace;
-  }
+}
+
+
+#btnCargar{
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #070ac7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav ul li a{
+  font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #070ac7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 

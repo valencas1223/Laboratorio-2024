@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="funcionamiento.js">
     <title>Contacto</title>
 </head>
 <body class="container1">
@@ -12,59 +13,65 @@
     </header>
     <nav>
         <ul>
-             <li><a href="index.html">Atras</a></li>
+            <li><a  href="index.html">Atras</a></li>
         </ul>
     </nav>
     
     <section>
-        
-        <form>
+        <form id="contactForm">
             <fieldset>
-            <legend>Formulario</legend>
-        <p><label for="nombre">Nombre (Max. 20 caracteres):</label> <input type="text" name="nombre" id="nombre" max="20" required></p>
-        
-        <p><label for="apellido">Apellido (Max. 20 caracteres)</label> <input type="text" id="apellido" name="apelldio" maxlength="20"></p>
+                <legend>Formulario</legend>
+                <p><label for="nombre">Nombre (Max. 20 caracteres):</label> 
+                   <input type="text" name="nombre" id="nombre" maxlength="20" required></p>
+                <p><label for="apellido">Apellido (Max. 20 caracteres):</label> 
+                   <input type="text" id="apellido" name="apellido" maxlength="20"></p>
+                <p><label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required></p>
+                <p><label for="telefono">Número de teléfono celular:</label> 
+                   <input type="text" name="telefono" id="telefono" placeholder="Ej: 123456789" required></p>
+                <p><label for="edad">Edad (16 a 120 años):</label> 
+                   <input type="number" id="edad" name="edad" min="16" max="120"></p>
+                <p><label for="direccion">Dirección:</label> 
+                   <textarea name="direccion" id="direccion" rows="3"></textarea></p>
 
-        <p><label for="email">Email:</label><input type="email" id="email" name="email" required></p>
-
-        <p><label for="celular">Numero de telefono celular:</label> <input type="telefono" name="telefono" placeholder="Ej 12345614" onfocus="this.placeholder=''" onblur="this.placeholder='Ej: 123456789'"></p>
-         
-        <p><label for="edad">Edad (16 a 120 años):</label> <input type="number" id="edad" name="edad" min="16" max="120"></p>
-
-        <p><label for="direccion">Direccion:</label> <textarea name="direccion" id="direccion" rows="3"></textarea></p>
-
-                    <legend>Provincia</legend>  
-        <select id="provincias">
+                <legend>Provincia</legend>  
+                <select id="provincias">
                     <option value="Chubut">Chubut</option>
                     <option value="Neuquén">Neuquén</option>
-                    <option value="Río Negro">Rio Negro</option>
+                    <option value="Río Negro">Río Negro</option>
                     <option value="Santa Cruz">Santa Cruz</option>
                     <option value="Tierra del Fuego">Tierra del Fuego</option>
-        </select>
-                    <P><label for="codigopostal">Codigo Postal (Formato: A1234ABC:)</label> <input type="text" id="codigopostal" name="codigopostal" pattern="[A][0-9]{4}[A-Z]{3}" title="Formato: A1234ABC" required></P>
-       </fieldset>
-       <fieldset>
-                    <legend>Metodo Preferido de Contacto</legend>
-                    <p><input type="radio" id="correo" name="metodocontacto" value="correo" checked><label for="correo">Correo Electronico</label></p>
+                </select>
 
-                    <p><input type="radio" id="postal" name="metodoContacto" value="postal"><label for="postal">Correo Postal</label></p>
+                <p><label for="codigopostal">Código Postal (Formato: A1234ABC):</label> 
+                   <input type="text" id="codigopostal" name="codigopostal" pattern="[A][0-9]{4}[A-Z]{3}" title="Formato: A1234ABC" required></p>
+            </fieldset>
 
-                    <p><input type="radio" id="telefono" name="metodoContacto" value="telefono"><label for="telefono">Teléfono</label></p>
-       </fieldset> 
-       <fieldset>
-         <legend>Tipos de Suscripciones</legend>
+            <fieldset>
+                <legend>Método Preferido de Contacto</legend>
+                <p><input type="radio" id="correo" name="metodoContacto" value="Correo Electrónico" checked>
+                   <label for="correo">Correo Electrónico</label></p>
+                <p><input type="radio" id="postal" name="metodoContacto" value="Correo Postal">
+                   <label for="postal">Correo Postal</label></p>
+                <p><input type="radio" id="telefono" name="metodoContacto" value="Teléfono">
+                   <label for="telefono">Teléfono</label></p>
+            </fieldset>
 
-         <p><input type="checkbox" id="noticias" name="suscripcion" value="noticias"> <label for="noticias">Noticias</label></p>
+            <fieldset>
+                <legend>Tipos de Suscripciones</legend>
+                <p><input type="checkbox" id="noticias" name="suscripcion" value="Noticias"> 
+                   <label for="noticias">Noticias</label></p>
+                <p><input type="checkbox" id="promociones" name="suscripcion" value="Promociones">
+                   <label for="promociones">Promociones</label></p>
+                <p><input type="checkbox" id="alertas" name="suscripcion" value="Alertas" checked>
+                   <label for="alertas">Alertas</label></p>
+                <p><input type="checkbox" id="eventos" name="suscripcion" value="Eventos">
+                   <label for="eventos">Eventos</label></p>
+            </fieldset>
 
-         <p><input type="checkbox" id="promociones" name="suscripcion" value="promociones"><label for="promociones">Promociones</label></p>
-
-         <p><input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked><label for="alertas">Alertas</label></p>
-
-         <p><input type="checkbox" id="eventos" name="suscripcion" value="eventos"> <label for="eventos">Eventos</label></p>
-       </fieldset>
-       
+          
             
-       </form>
+        </form>
     </section>
 
     <section>
@@ -75,49 +82,26 @@
                     <th>Valor</th>
                 </tr>
             </thead>
-                <tr>
-                    <td>Nombre</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Apellido</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Teléfono</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Edad</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Dirección</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Provincia</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Código Postal</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Método de Contacto</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Suscripción</td>
-                    <td></td>
-                </tr>
-            
+            <tbody>
+                <tr><td>Nombre</td><td id="resultadoNombre"></td></tr>
+                <tr><td>Apellido</td><td id="resultadoApellido"></td></tr>
+                <tr><td>Email</td><td id="resultadoEmail"></td></tr>
+                <tr><td>Teléfono</td><td id="resultadoTelefono"></td></tr>
+                <tr><td>Edad</td><td id="resultadoEdad"></td></tr>
+                <tr><td>Dirección</td><td id="resultadoDireccion"></td></tr>
+                <tr><td>Provincia</td><td id="resultadoProvincia"></td></tr>
+                <tr><td>Código Postal</td><td id="resultadoCodigoPostal"></td></tr>
+                <tr><td>Método de Contacto</td><td id="resultadoMetodoContacto"></td></tr>
+                <tr><td>Suscripción</td><td id="resultadoSuscripcion"></td></tr>
+            </tbody>
         </table>
     </section>
-    
+
+    <footer>
+        <p><input type="button" value="Una vez coloque los datos de CLICK" id="btnCargar"></p>
+        <p>&copy; Universidad Nacional del Comahue Zona Atlántica</p>
+    </footer>
+ <script src="funcionamiento.js"></script>
+   
 </body>
 </html>
