@@ -1,4 +1,5 @@
-body{
+body{ 
+  
     background-color: rgba(73, 70, 70, 0.89);
     font-family: 'Courier New';
     background:  rgba(73, 70, 70, 0.89);
@@ -8,9 +9,7 @@ body{
       from {background-color: rgb(0, 0, 0);}
       to {background-color:  rgba(73, 70, 70, 0.89)}
     } 
- 
-
-
+    
     
 ul{
   list-style-type: none;
@@ -106,6 +105,88 @@ nav ul li a{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+body.container1  {
+  background-image: url('md.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+
+}
+
+.acerca-de { 
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #acb1af;
+  border-radius: 8px;
+  max-height: 300px; 
+  overflow-y: auto;
+  position: relative;
+}
+.sticky{
+  position: sticky;
+  top: 0; 
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1000;
+
+
+
+}
+.volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background-color 0.3s;
+}
+
+.volver-arriba:hover {
+  background-color: #555;
+}
+.encabezado {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6d6d6d;
+  color: rgb(255, 244, 244);
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d; 
+}
+
+.logo:hover {
+  transform: rotateY(360deg); 
 }
 
 
