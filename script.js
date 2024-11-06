@@ -1,35 +1,57 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+// Añadir interactividad:Todo lo cargado en el formulario 
+//debe reflejarse en la tabla inferior al terminar de rellenar
+// cada campo (sin necesidad de botones)
+const form = document.getElementById("contactForm");
+const nombreInput = document.getElementById("nombre");
+const apellidoInput = document.getElementById("apellido");
+const emailInput = document.getElementById("email");
+const telefonoInput = document.getElementById("telefono");
+const edadInput = document.getElementById("edad");
+const direccionInput = document.getElementById("direccion");
+const provinciaInput = document.getElementById("provincia");
+const codigoPostalInput = document.getElementById("codigopostal");
+const metodoContactoInputs = document.querySelectorAll("input[name='metodoContacto']");
+const suscripcionInputs = document.querySelectorAll("input[name='suscripcion']");
 
-    
-    const nombre = document.getElementById("nombre").value;
-    const apellido = document.getElementById("apellido").value;
-    const email = document.getElementById("email").value;
-    const telefono = document.getElementById("telefono").value;
-    const edad = document.getElementById("edad").value;
-    const direccion = document.getElementById("direccion").value;
-    const provincia = document.getElementById("provincia").value;
-    const codigoPostal = document.getElementById("codigopostal").value;
 
+function actualizarTabla() {
+    document.getElementById("resultadoNombre").textContent = nombreInput.value;
+    document.getElementById("resultadoApellido").textContent = apellidoInput.value;
+    document.getElementById("resultadoEmail").textContent = emailInput.value;
+    document.getElementById("resultadoTelefono").textContent = telefonoInput.value;
+    document.getElementById("resultadoEdad").textContent = edadInput.value;
+    document.getElementById("resultadoDireccion").textContent = direccionInput.value;
+    document.getElementById("resultadoProvincia").textContent = provinciaInput.value;
+    document.getElementById("resultadoCodigoPostal").textContent = codigoPostalInput.value;
     
-    const metodoContacto = document.querySelector('input[name="metodoContacto"]:checked').value;
+    let metodoContactoSeleccionado = "";
+    metodoContactoInputs.forEach(input => {
+        if (input.checked) {
+            metodoContactoSeleccionado = input.value;
+        }
+    });
+    document.getElementById("resultadoMetodoContacto").textContent = metodoContactoSeleccionado;
+    let suscripcionesSeleccionadas = [];
+    suscripcionInputs.forEach(input => {
+        if (input.checked) {
+            suscripcionesSeleccionadas.push(input.value);
+        }
+    });
+    document.getElementById("resultadoSuscripcion").textContent = suscripcionesSeleccionadas.join(", ");
+}
 
-    
-    const suscripciones = Array.from(document.querySelectorAll('input[name="suscripcion"]:checked'))
-        .map(checkbox => checkbox.value)
-        .join(", ");
-
-    
-    document.getElementById("resultadoNombre").textContent = nombre;
-    document.getElementById("resultadoApellido").textContent = apellido;
-    document.getElementById("resultadoEmail").textContent = email;
-    document.getElementById("resultadoTelefono").textContent = telefono;
-    document.getElementById("resultadoEdad").textContent = edad;
-    document.getElementById("resultadoDireccion").textContent = direccion;
-    document.getElementById("resultadoProvincia").textContent = provincia;
-    document.getElementById("resultadoCodigoPostal").textContent = codigoPostal;
-    document.getElementById("resultadoMetodoContacto").textContent = metodoContacto;
-    document.getElementById("resultadoSuscripcion").textContent = suscripciones;
+[nombreInput, apellidoInput, emailInput, telefonoInput, edadInput, direccionInput, provinciaInput, codigoPostalInput].forEach(input => {
+    input.addEventListener("input", actualizarTabla);
 });
 
+metodoContactoInputs.forEach(input => {
+    input.addEventListener("change", actualizarTabla);
+});
+suscripcionInputs.forEach(input => {
+    input.addEventListener("change", actualizarTabla);
+});
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    actualizarTabla(); 
+});
 
