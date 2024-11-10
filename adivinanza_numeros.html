@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
+    <title>Adivinanzas y Números</title>
 </head>
 <body>
-    
+    <header class="encabezado">
+        <div class="titulo-logo">
+            <h1>Zona Juegos</h1>
+            <p><img src="universidad-comahue-negra.png" alt="frente_curza" class="logo"></p>
+        </div>
+    </header>
+
+    <div style="height: 200px;">
+        <nav class="acom">
+            <ul>
+                <li><a href="juegos.html">Atras</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="juego-adivinanza" class="juego" style="margin-top: 10px; text-align: center;">
+        <h2>Adivinanza de Números</h2>
+        <input type="number" id="numero-input" placeholder="Ingresa un número" min="1" max="100">
+        <button class="estilo" onclick="adivinarNumero()">Adivinar</button>
+        <p id="mensaje-adivinanza"></p>
+    </section>
+
+    <script src="numeros.js" defer></script>
 </body>
 </html>
+

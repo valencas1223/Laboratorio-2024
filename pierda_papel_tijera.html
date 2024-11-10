@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
+    <title>Piedras, Papel o Tijeras</title>
 </head>
 <body>
+    <header class="encabezado">
+        <div class="titulo-logo">
+            <h1>Zona Juegos</h1>
+            <p><img src="universidad-comahue-negra.png" alt="frente_curza" class="logo"></p>
+        </div>
+    </header>
     
-</body>
+    
+    <nav class="acom" style="margin-bottom: 20px;">
+        <ul>
+            <li><a href="juegos.html">Atras</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="juego-piedra-papel-tijera" class="juego" style="margin-top: 150px; text-align: center;">
+        <h2>Piedra, Papel o Tijera</h2>
+        <button class="estilo" onclick="jugar('piedra')">Piedra</button>
+        <button class="estilo" onclick="jugar('papel')">Papel</button>
+        <button class="estilo" onclick="jugar('tijera')">Tijera</button>
+        <p id="mensaje-ppt"></p>
+    </section>
+
+    
+    <script src="ppt.js"></script>
+</body> 
 </html>
+
+
+

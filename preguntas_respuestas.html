@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
+    <title>Preguntas y Respuestas</title>
 </head>
 <body>
+    <header class="encabezado">
+        <div class="titulo-logo">
+            <h1>Zona Juegos</h1>
+            <p><img src="universidad-comahue-negra.png" alt="frente_curza" class="logo"></p>
+        </div>
+    </header>
+
     
+        <nav class="acom">
+            <ul>
+                <li><a href="juegos.html">Atras</a></li>
+            </ul>
+        </nav>
+    
+
+    <section id="juego-preguntas" class="juego" style="margin-top: 200px; text-align: center;">
+        <h2>Preguntas y Respuestas</h2>
+        <p id="pregunta"></p>
+        <button class="estilo" onclick="respuesta(true)">Verdadero</button>
+        <button class="estilo" onclick="respuesta(false)">Falso</button>
+        <p id="mensaje-pregunta"></p>
+    </section>
+
+    <script src="preandres.js"></script>
 </body>
 </html>

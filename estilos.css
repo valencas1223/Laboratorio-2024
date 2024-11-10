@@ -116,6 +116,16 @@ body.container1  {
   padding: 0;
 
 }
+body.container3{
+  background-image: url('imagen.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
 
 .acerca-de { 
   max-width: 800px;
@@ -249,6 +259,43 @@ button#leerMasBtn:focus, input[type="submit"]:focus {
 .oculto {
   display: none;
 }
+#juego-memoria {
+  margin-top: 100px;
+  text-align: center;
+}
+.acom {
+  position: sticky;
+  top: 100px; 
+  text-align: center;
+  background-color: rgba(75, 82, 105, 0.89);
+  padding: 10px;
+  z-index: 999;
+  }
+  
+ .estilo{
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .estilo:hover, input[type="submit"]:hover {
+    background-color: #45a049; 
+  }
+  
+  .estilo:focus, input[type="submit"]:focus {
+    outline: none; 
+    box-shadow: 0 0 5px #4CAF50; 
+  }
+ 
+ 
+
+
+
 
 
 
